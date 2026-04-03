@@ -25,7 +25,7 @@ import net.minecraft.client.gui.components.PlayerFaceRenderer
 import net.minecraft.network.protocol.game.ClientboundMapItemDataPacket
 import java.awt.Color as AwtColor
 
-@DevModule
+//@DevModule
 object DungeonMap : Module(
     name = "Dungeon Map",
     description = "Customizable dungeon map with room colors, door colors, and player names."
