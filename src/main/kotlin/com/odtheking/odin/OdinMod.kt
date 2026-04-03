@@ -82,9 +82,5 @@ object OdinMod : ClientModInitializer {
         SpecialGuiElementRegistry.register { context ->
             ItemStateRenderer(context.vertexConsumers())
         }
-
-        scope.launch {
-            postData("https://api.odtheking.com/tele/", """{"username": "${mc.user?.name?.takeIf { !it.matches(Regex("Player\\d{2,3}")) } ?: return@launch}", "version": "Fabric $version"}""")
-        }
     }
 }
