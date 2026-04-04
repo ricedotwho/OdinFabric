@@ -68,8 +68,8 @@ object DungeonMap : Module(
 
     private val mapHud by HUD("Dungeon Map", "Displays the dungeon map with customizable colors.", false) { example ->
         when {
-            DungeonUtils.openRoomCount == 0 && !example -> 0 to 0
             example -> renderExampleMap()
+            DungeonUtils.openRoomCount == 0 || !DungeonUtils.inBoss -> 0 to 0
             else -> renderDungeonMap()
         }
     }
